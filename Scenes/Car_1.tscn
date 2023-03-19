@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/Car/1377Car.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Audio/carcrashsoundeefect.wav" type="AudioStream" id=2]
+[ext_resource path="res://Scripts/Car_1.gd" type="Script" id=3]
+[ext_resource path="res://assets/Car/1377Car.png" type="Texture" id=4]
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_texture = ExtResource( 4 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 1, 0.758229, 1.96593 )
+
+[sub_resource type="BoxShape" id=3]
+
+[node name="Car_1" type="VehicleBody"]
+collision_layer = 2
+collision_mask = 2
+mass = 2.16
+gravity_scale = 0.2
+script = ExtResource( 3 )
+
+[node name="1377Car" type="MeshInstance" parent="."]
+transform = Transform( -0.03, 0, -2.62268e-09, 0, 0.03, 0, 2.62268e-09, 0, -0.03, 0, 0, 0 )
+mesh = ExtResource( 1 )
+material/0 = SubResource( 4 )
+
+[node name="CollisionShapeCar_1" type="CollisionShape" parent="."]
+transform = Transform( 0.649335, 0, 0, 0, 0.431408, 0, 0, 0, 0.642243, 0, 0.521236, 0 )
+shape = SubResource( 2 )
+
+[node name="AreaCar_1" type="Area" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape" type="CollisionShape" parent="AreaCar_1"]
+shape = SubResource( 3 )
+
+[node name="Car_crash_sound" type="AudioStreamPlayer3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.119106, 1.00439, 0 )
+stream = ExtResource( 2 )
+unit_size = 8.1
+doppler_tracking = 2
+
+[node name="Live" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="body_entered" from="AreaCar_1" to="." method="_on_AreaCar_1_body_entered"]
+[connection signal="timeout" from="Live" to="." method="_on_Live_timeout"]

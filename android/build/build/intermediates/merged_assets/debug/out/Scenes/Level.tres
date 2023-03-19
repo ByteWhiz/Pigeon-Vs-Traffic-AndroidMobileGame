@@ -1,0 +1,30 @@
+[gd_resource type="Environment" format=2]
+
+[resource]
+background_mode = 1
+background_color = Color( 0.443137, 0.403922, 0.25098, 1 )
+fog_depth_begin = 37.1
+fog_depth_end = 123.7
+fog_depth_curve = 0.052556
+fog_transmit_curve = 0.0824693
+tonemap_mode = 2
+tonemap_exposure = 2.11
+tonemap_white = 1.11
+auto_exposure_scale = 0.01
+ss_reflections_fade_in = 0.0265165
+ss_reflections_fade_out = 0.466517
+ssao_radius = 3.24
+ssao_intensity = 3.89
+ssao_intensity2 = 90.6
+ssao_bias = 2.981
+ssao_ao_channel_affect = 1.0
+ssao_blur = 1
+ssao_edge_sharpness = 14.44
+dof_blur_far_enabled = true
+dof_blur_far_distance = 7.99
+dof_blur_far_transition = 2.31
+dof_blur_far_amount = 0.05
+dof_blur_far_quality = 2
+dof_blur_near_distance = 7.58
+dof_blur_near_transition = 2.77
+adjustment_enabled = true

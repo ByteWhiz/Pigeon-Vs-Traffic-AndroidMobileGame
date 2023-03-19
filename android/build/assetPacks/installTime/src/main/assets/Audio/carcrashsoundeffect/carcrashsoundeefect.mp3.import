@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/carcrashsoundeefect.mp3-51ef289af6d0c396783c1d008a1ab015.mp3str"
+
+[deps]
+
+source_file="res://Audio/carcrashsoundeffect/carcrashsoundeefect.mp3"
+dest_files=[ "res://.import/carcrashsoundeefect.mp3-51ef289af6d0c396783c1d008a1ab015.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

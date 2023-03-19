@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/PoliceSirenSoundEffect.mp3-08061a78a88e86c33dcdf4b2f4573f6b.mp3str"
+
+[deps]
+
+source_file="res://Audio/PoliceSirenSoundEffect.mp3"
+dest_files=[ "res://.import/PoliceSirenSoundEffect.mp3-08061a78a88e86c33dcdf4b2f4573f6b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
